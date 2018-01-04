@@ -2,12 +2,12 @@ import 'modules/bootstrap/dist/css/bootstrap.min.css';
 import 'modules/font-awesome/css/font-awesome.min.css';
 
 import React from 'react';
+import Menu from '../template/menu';
+import Routes from './routes';
 
 export default props => (
     <div className="container">
-       <div className="jumbotron">
-        <h1>Learn React!</h1>
-        <p><a className="btn btn-primary btn-lg" href="#" role="button">Button</a></p>
-        </div>
+      <Menu/>
+      <Routes/>
     </div>
 )
