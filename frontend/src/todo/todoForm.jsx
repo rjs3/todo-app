@@ -1,21 +1,35 @@
-import React from 'react';
-import Grid from '../template/grid';
-import IconButton from '../template/iconButton';
+import React from "react";
+import Grid from "../template/grid";
+import IconButton from "../template/iconButton";
 
 export default props => (
+  <div role="form" className="todoForm">
+    <Grid cols="8">
+      <input
+        id="description"
+        className="form-control"
+        placeholder="Adicione uma tarefa"
+        onChange={props.handleChange}
+        value={props.description}
+      />
+    </Grid>
 
-    <div role="form" className="todoForm">
-        <Grid cols="9 6">
-            <input id="description" className="form-control"
-            placeholder="Adicione uma tarefa" 
-            onChange={props.handleChange}
-            value={props.description}></input>
-        </Grid>
-
-
-        <Grid cols="3 6">
-            <IconButton style="primary" icon="plus" onClick={props.handleAdd}>
-            </IconButton> 
-        </Grid>
-    </div>
-)
+    <Grid cols="4">
+      <IconButton
+        style="primary btn-add"
+        icon="plus"
+        onClick={props.handleAdd}
+      />
+      <IconButton
+        style="default btn-add"
+        icon="search"
+        onClick={props.handleSearch}
+      />
+      <IconButton
+        style="danger btn-add"
+        icon="close"
+        onClick={props.handleClear}
+      />
+    </Grid>
+  </div>
+);
